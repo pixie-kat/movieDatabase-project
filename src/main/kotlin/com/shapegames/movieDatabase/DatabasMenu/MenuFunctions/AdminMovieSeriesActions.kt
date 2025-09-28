@@ -1,7 +1,5 @@
 package com.shapegames.movieDatabase.DatabasMenu.MenuFunctions
 
-//Sign up as a user
+//Add Movies
 
-//Log in
-
-//Log out
+//Delete Movies

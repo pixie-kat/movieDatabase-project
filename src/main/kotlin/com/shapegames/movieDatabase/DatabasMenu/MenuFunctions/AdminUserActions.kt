@@ -1,3 +1,5 @@
 package com.shapegames.movieDatabase.DatabasMenu.MenuFunctions
 
-//Rate Movie/Series
+//"See user overview"
+//Delete user"
+//Change user permission

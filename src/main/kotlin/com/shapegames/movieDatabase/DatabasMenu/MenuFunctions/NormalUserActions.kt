@@ -1,3 +1,9 @@
 package com.shapegames.movieDatabase.DatabasMenu.MenuFunctions
 
-//Rate Movie/Series
+//Sign up as a user
+
+//Log in
+
+//Log out
+
+//CloseApp
