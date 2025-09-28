@@ -17,6 +17,7 @@ specific user rating of movie/series
 
 We should have a menu for the movie database.
 Different depending on the user that "logs in"
+//something like this
 1. See Movie or Series overview
 2. Add new Movie/Series to overview //only user with specific permission
 3. Delete Movie/Series from overview //only user with specific permission
