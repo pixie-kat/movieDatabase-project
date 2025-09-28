@@ -1,0 +1,32 @@
+Movie Database: Users, movies, series, actors, ratings, favorites.
+
+Movie properties:
+Actors, directors, ratings, can be favorited
+
+Series properties:
+Actors, ratings, can be favorited
+
+Users can:
+rate a movie/series, favorite a movie/series
+
+Public information:
+overall rating of movie/series
+
+Private information:
+specific user rating of movie/series
+
+We should have a menu for the movie database.
+Different depending on the user that "logs in"
+1. See Movie or Series overview
+2. Add new Movie/Series to overview //only user with specific permission
+3. Delete Movie/Series from overview //only user with specific permission
+4. Rate Movie/Series
+5. Sign up as user
+6. See user overview //only administrators
+7. Delete user //only administrator
+8. Change user permission //only administrators
+9. Close application
+
+
+
+
