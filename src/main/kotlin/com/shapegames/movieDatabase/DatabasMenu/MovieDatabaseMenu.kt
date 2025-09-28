@@ -47,7 +47,7 @@ fun welcomeMessageNotLoggedIn(){
 
 fun welcomeMessageLoggedInNormalUser(){
     //add username to the message!
-    println("Welcome ... please make your selection\n" +
+    println("Welcome ..., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Rate Movie/Series\n" +
             "3. Log out\n" +
@@ -73,7 +73,8 @@ fun welcomeMessageLoggedInNormalUser(){
 }
 
 fun welcomeMessageLoggedInAdministrator(){
-    println("Welcome to the Movie database system\n" +
+    //also add user name here
+    println("Welcome admin .., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Add new Movie/Series to overview\n" +
             "3. Delete Movie/Series from overview\n" +
