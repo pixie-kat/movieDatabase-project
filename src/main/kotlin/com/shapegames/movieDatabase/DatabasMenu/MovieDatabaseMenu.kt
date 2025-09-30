@@ -41,9 +41,8 @@ fun welcomeMessageNotLoggedIn(){
 
 fun welcomeMessageBasicUser(){
     stateOfMenu = 1
-        //add username to the message!
-    basicUserTestData()
-    println("Welcome ..., please make your selection\n" +
+    val basic1 = basicUserTestData()
+    println("Welcome ${basic1.UserName}, please make your selection:\n" +
             "1. See Movie or Series Overview\n" +
             "2. Rate Movie/Series\n" +
             "3. Log out\n" +
@@ -71,9 +70,8 @@ fun welcomeMessageBasicUser(){
 
 fun welcomeMessageEditor() {
     stateOfMenu = 2
-        //also add user name here
-    editorTestData()
-    println("Welcome .., please make your selection\n" +
+    val editor1 = editorTestData()
+    println("Welcome ${editor1.UserName} please make your selection:\n" +
             "1. See Movie or Series Overview\n" +
             "2. Rate Movie/Series\n" +
             "3. Add new Movie/Series to overview\n" +
@@ -109,9 +107,8 @@ fun welcomeMessageEditor() {
 
 fun welcomeMessageAdministrator(){
     stateOfMenu = 3
-        //also add user name here
-    adminTestData()
-    println("Welcome admin .., please make your selection\n" +
+    val admin1 = adminTestData()
+    println("Welcome ${admin1.UserName}, please make your selection:\n" +
             "1. See Movie or Series Overview\n" +
             "2. Add new Movie/Series to overview\n" +
             "3. Delete Movie/Series from overview\n" +

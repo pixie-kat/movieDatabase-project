@@ -61,7 +61,7 @@ fun seeSeriesOverview() {
 
 //here I handle the actions following which menu the user previously was in
 //first I had it directly in the overviewSelection() but because of the nesting I moved it out
-//+ if needed I can easier reuse it if it makes sense
+//+ if needed I could easier reuse it if it makes sense
 fun stateOfMenu() {
     when (stateOfMenu) {
         0 -> {
