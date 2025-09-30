@@ -44,7 +44,7 @@ fun overviewSelection() {
 fun seeMovieOverview(){
     //for now using just some test data
     movieTestData()
-    println("Movie list:")
+    println("Movie overview:")
     for ((index, movie) in testMovieList.withIndex()) {
         println("${index+1}. ${movie.movieTitle}, Actors: ${movie.actors}, Rating: ${movie.rating}, Has been favorited by ${movie.isFavoritOfUsers} users.")
     }
@@ -53,7 +53,7 @@ fun seeMovieOverview(){
 //here I show the general series overview
 fun seeSeriesOverview() {
     seriesTestData()
-    println("Series list:")
+    println("Series overview:")
     for ((index, series) in testSeriesList.withIndex()) {
         println("${index+1}. ${series.seriesTitle}, Actors: ${series.actors}, Rating: ${series.rating}, Has been favorited by ${series.isFavoritOfUsers} users.")
     }
