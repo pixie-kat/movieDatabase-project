@@ -7,8 +7,8 @@ import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageEditor
 import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageNotLoggedIn
 import com.shapegames.movieDatabase.TestData.*
 
-//See Movie or Series Overview
 
+//here I follow up when the user opens the movie + series overview
 fun overviewSelection() {
     println("Which list do you want to see?\n" +
             "1. Movie Overview\n" +
@@ -19,6 +19,8 @@ fun overviewSelection() {
         "1" -> {
             seeMovieOverview()
             println("Press any key to get back to the previous menu.")
+            //I know the user selection is not being used, but it allows for the user to actually press any key
+            // without the overview being visible again directly
             val userSelection = readln()
             overviewSelection()
         }
@@ -38,6 +40,7 @@ fun overviewSelection() {
     }
 }
 
+//here I show the general movie overview
 fun seeMovieOverview(){
     //for now using just some test data
     movieTestData()
@@ -47,6 +50,7 @@ fun seeMovieOverview(){
     }
 }
 
+//here I show the general series overview
 fun seeSeriesOverview() {
     seriesTestData()
     println("Series list:")
@@ -55,7 +59,9 @@ fun seeSeriesOverview() {
     }
 }
 
-
+//here I handle the actions following which menu the user previously was in
+//first I had it directly in the overviewSelection() but because of the nesting I moved it out
+//+ if needed I can easier reuse it if it makes sense
 fun stateOfMenu() {
     when (stateOfMenu) {
         0 -> {

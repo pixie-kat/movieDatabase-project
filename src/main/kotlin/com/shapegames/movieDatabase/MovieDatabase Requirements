@@ -1,3 +1,4 @@
+// this is the prompt we got for a movie database system
 Movie Database: Users, movies, series, actors, ratings, favorites.
 
 Movie properties:
@@ -6,8 +7,21 @@ Actors, directors, ratings, can be favorited
 Series properties:
 Actors, ratings, can be favorited
 
-Users can:
-rate a movie/series, favorite a movie/series
+
+//here I add some further requirements. but it also gets extended while I work on the code, as I have more ideas
+Not logged in users can:
+see the movie list
+
+Basic Users can:
+whatever a not logged in user can, rate a movie/series, favorite a movie/series
+
+Editors can:
+whatever a basic user can, add and deleted movies/series
+
+Administrators can:
+whatever an editor can, user management
+
+
 
 Public information:
 overall rating of movie/series

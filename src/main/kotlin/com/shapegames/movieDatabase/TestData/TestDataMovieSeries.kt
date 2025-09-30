@@ -2,6 +2,8 @@ package com.shapegames.movieDatabase.TestData
 
 import com.shapegames.movieDatabase.`Movies-Series`.*
 
+//creating some easy movie and series test data to test specific functionality without having to create "real" movies or series.
+
 val testMovieList = mutableListOf<Movie>()
 val mutableLotrActorList = mutableListOf<String>("Orlando Bloom", "Elijah Wood", "Ian McKellen", "Viggo Mortensen")
 val mutableUsersThatFavorited = mutableListOf<String>("Fan1, Fan2, Fan3")

@@ -18,6 +18,7 @@ fun welcomeMessageNotLoggedIn(){
             "3. Log in\n" +
             "4. Close application")
     val userSelection = readln()
+    //depending on the user selection I call different functions
     when (userSelection) {
         "1" -> {
             overviewSelection()
