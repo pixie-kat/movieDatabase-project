@@ -11,6 +11,5 @@ fun logOut() {
 }
 
 fun unknownCommand(){
-    println("Unknown command")
-    welcomeMessageNotLoggedIn()
+    println("Unknown command. Please select a valid option.\n")
 }

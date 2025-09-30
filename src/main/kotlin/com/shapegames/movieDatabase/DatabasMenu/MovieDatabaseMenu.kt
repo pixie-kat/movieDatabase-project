@@ -2,6 +2,7 @@ package com.shapegames.movieDatabase.DatabasMenu
 
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.closeApplication
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.logOut
+import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.overviewSelection
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.unknownCommand
 import kotlin.math.log
 
@@ -28,7 +29,7 @@ fun welcomeMessageNotLoggedIn(){
     val userSelection = readln()
     when (userSelection) {
         "1" -> {
-            //Use SeeOverview
+            overviewSelection()
         }
         "2" -> {
             //Use NormalUserActions
@@ -41,11 +42,12 @@ fun welcomeMessageNotLoggedIn(){
         }
         else -> {
             unknownCommand()
+            welcomeMessageLoggedInUser()
         }
     }
 }
 
-fun welcomeMessageLoggedInNormalUser(){
+fun welcomeMessageLoggedInUser(){
     //add username to the message!
     println("Welcome ..., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
@@ -55,7 +57,7 @@ fun welcomeMessageLoggedInNormalUser(){
     val userSelection = readln()
     when (userSelection) {
         "1" -> {
-            //Use SeeOverview
+            overviewSelection()
         }
         "2" -> {
             //Use RateMovieSeries
@@ -68,6 +70,7 @@ fun welcomeMessageLoggedInNormalUser(){
         }
         else -> {
             unknownCommand()
+            welcomeMessageLoggedInUser()
         }
     }
 }
@@ -87,7 +90,7 @@ fun welcomeMessageLoggedInAdministrator(){
     val userSelection = readln()
     when (userSelection) {
         "1" -> {
-            //Use SeeOverview
+            overviewSelection()
         }
         "2" -> {
             //Use AdminMovieSeriesActions
@@ -115,6 +118,7 @@ fun welcomeMessageLoggedInAdministrator(){
         }
         else -> {
             unknownCommand()
+            welcomeMessageLoggedInAdministrator()
         }
     }
 }
