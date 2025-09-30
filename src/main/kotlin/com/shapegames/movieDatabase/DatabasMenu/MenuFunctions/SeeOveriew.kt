@@ -9,6 +9,6 @@ fun seeMovieOverview(){
     MovieTestData()
     println("Movie list:")
     for ((index, movie) in testMovieList.withIndex()) {
-        println("${index+1}. ${movie.movieTitle}, Actors: ${movie.actors}, Rating: ${movie.rating}, Has been favorited: ${movie.isFavoritOfUsers}")
+        println("${index+1}. ${movie.movieTitle}, Actors: ${movie.actors}, Rating: ${movie.rating}, Has been favorited by ${movie.isFavoritOfUsers} users.")
     }
 }
