@@ -4,7 +4,6 @@ import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.closeApplication
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.logOut
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.overviewSelection
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.unknownCommand
-import kotlin.math.log
 
 /*
 See Movie or Series overview including their ratings
@@ -20,8 +19,11 @@ Log in
 Log out
  */
 
+var stateOfMenu = 0
+
 fun welcomeMessageNotLoggedIn(){
-    println("Welcome to the Movie Database system\n" +
+    stateOfMenu =   0
+        println("Welcome to the Movie Database system\n" +
             "1. See Movie or Series Overview\n" +
             "2. Sign up as a user\n" +
             "3. Log in\n" +
@@ -32,23 +34,24 @@ fun welcomeMessageNotLoggedIn(){
             overviewSelection()
         }
         "2" -> {
-            //Use NormalUserActions
+            //Use UserActions
         }
         "3" -> {
-            //Use NormalUserActions
+            //Use UserActions
         }
         "4" -> {
             closeApplication()
         }
         else -> {
             unknownCommand()
-            welcomeMessageLoggedInUser()
+            welcomeMessageBasicUser()
         }
     }
 }
 
-fun welcomeMessageLoggedInUser(){
-    //add username to the message!
+fun welcomeMessageBasicUser(){
+    stateOfMenu = 1
+        //add username to the message!
     println("Welcome ..., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Rate Movie/Series\n" +
@@ -70,13 +73,51 @@ fun welcomeMessageLoggedInUser(){
         }
         else -> {
             unknownCommand()
-            welcomeMessageLoggedInUser()
+            welcomeMessageBasicUser()
         }
     }
 }
 
-fun welcomeMessageLoggedInAdministrator(){
-    //also add user name here
+fun welcomeMessageEditor() {
+    stateOfMenu = 2
+        //also add user name here
+    println("Welcome .., please make your selection\n" +
+            "1. See Movie or Series Overview\n" +
+            "2. Rate Movie/Series\n" +
+            "3. Add new Movie/Series to overview\n" +
+            "4. Delete Movie/Series from overview\n" +
+            "5. Log out\n" +
+            "6. Close application")
+    val userSelection = readln()
+    when (userSelection) {
+        "1" -> {
+            overviewSelection()
+        }
+        "2" -> {
+            //RateMovieSeries
+        }
+        "3" -> {
+            //Use EditMovieSeries
+        }
+        "4" -> {
+            //Use EditMovieSeries
+        }
+        "5" -> {
+            logOut()
+        }
+        "6" -> {
+            closeApplication()
+        }
+        else -> {
+            unknownCommand()
+            welcomeMessageEditor()
+        }
+    }
+}
+
+fun welcomeMessageAdministrator(){
+    stateOfMenu = 3
+        //also add user name here
     println("Welcome admin .., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Add new Movie/Series to overview\n" +
@@ -93,10 +134,10 @@ fun welcomeMessageLoggedInAdministrator(){
             overviewSelection()
         }
         "2" -> {
-            //Use AdminMovieSeriesActions
+            //Use EditMovieSeries
         }
         "3" -> {
-            //Use AdminMovieSeriesActions
+            //Use EditMovieSeries
         }
         "4" -> {
             //RateMovieSeries
@@ -118,7 +159,7 @@ fun welcomeMessageLoggedInAdministrator(){
         }
         else -> {
             unknownCommand()
-            welcomeMessageLoggedInAdministrator()
+            welcomeMessageAdministrator()
         }
     }
 }

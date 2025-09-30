@@ -1,5 +1,10 @@
 package com.shapegames.movieDatabase.DatabasMenu.MenuFunctions
 
+import com.shapegames.movieDatabase.DatabasMenu.stateOfMenu
+import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageAdministrator
+import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageBasicUser
+import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageEditor
+import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageNotLoggedIn
 import com.shapegames.movieDatabase.TestData.*
 
 //See Movie or Series Overview
@@ -24,7 +29,21 @@ fun overviewSelection() {
             overviewSelection()
         }
         "3" -> {
-            //how do I get back to the right menu???
+            when (stateOfMenu) {
+                0 -> {
+                    welcomeMessageNotLoggedIn()
+                }
+                1 -> {
+                    welcomeMessageBasicUser()
+                }
+                2 -> {
+                    welcomeMessageEditor()
+                }
+                3 -> {
+                    welcomeMessageAdministrator()
+                }
+            }
+        //how do I get back to the right menu???
         }
         else -> {
             unknownCommand()
