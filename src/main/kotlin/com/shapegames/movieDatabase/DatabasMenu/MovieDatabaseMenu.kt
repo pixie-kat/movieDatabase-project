@@ -4,23 +4,12 @@ import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.closeApplication
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.logOut
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.overviewSelection
 import com.shapegames.movieDatabase.DatabasMenu.MenuFunctions.unknownCommand
+import com.shapegames.movieDatabase.TestData.*
 
-/*
-See Movie or Series overview including their ratings
-Add new Movie/Series to overview //only user with specific permission
-Delete Movie/Series from overview //only user with specific permission
-Rate Movie/Series //Only when logged in
-Sign up as user
-See user overview //only administrators
-Delete user //only administrator
-Change user permission //only administrators
-Close application
-Log in
-Log out
- */
-
+//this variable allows me to save in which menu the user is at the moment to navigate later back to the right one
 var stateOfMenu = 0
 
+//Here I define the general menu plus any user specific menus that gives them different functionality depending on their user permission
 fun welcomeMessageNotLoggedIn(){
     stateOfMenu =   0
         println("Welcome to the Movie Database system\n" +
@@ -52,6 +41,7 @@ fun welcomeMessageNotLoggedIn(){
 fun welcomeMessageBasicUser(){
     stateOfMenu = 1
         //add username to the message!
+    basicUserTestData()
     println("Welcome ..., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Rate Movie/Series\n" +
@@ -81,6 +71,7 @@ fun welcomeMessageBasicUser(){
 fun welcomeMessageEditor() {
     stateOfMenu = 2
         //also add user name here
+    editorTestData()
     println("Welcome .., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Rate Movie/Series\n" +
@@ -118,6 +109,7 @@ fun welcomeMessageEditor() {
 fun welcomeMessageAdministrator(){
     stateOfMenu = 3
         //also add user name here
+    adminTestData()
     println("Welcome admin .., please make your selection\n" +
             "1. See Movie or Series Overview\n" +
             "2. Add new Movie/Series to overview\n" +

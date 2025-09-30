@@ -29,22 +29,8 @@ fun overviewSelection() {
             overviewSelection()
         }
         "3" -> {
-            when (stateOfMenu) {
-                0 -> {
-                    welcomeMessageNotLoggedIn()
-                }
-                1 -> {
-                    welcomeMessageBasicUser()
-                }
-                2 -> {
-                    welcomeMessageEditor()
-                }
-                3 -> {
-                    welcomeMessageAdministrator()
-                }
+            stateOfMenu()
             }
-        //how do I get back to the right menu???
-        }
         else -> {
             unknownCommand()
             overviewSelection()
@@ -66,5 +52,23 @@ fun seeSeriesOverview() {
     println("Series list:")
     for ((index, series) in testSeriesList.withIndex()) {
         println("${index+1}. ${series.seriesTitle}, Actors: ${series.actors}, Rating: ${series.rating}, Has been favorited by ${series.isFavoritOfUsers} users.")
+    }
+}
+
+
+fun stateOfMenu() {
+    when (stateOfMenu) {
+        0 -> {
+            welcomeMessageNotLoggedIn()
+        }
+        1 -> {
+            welcomeMessageBasicUser()
+        }
+        2 -> {
+            welcomeMessageEditor()
+        }
+        3 -> {
+            welcomeMessageAdministrator()
+        }
     }
 }

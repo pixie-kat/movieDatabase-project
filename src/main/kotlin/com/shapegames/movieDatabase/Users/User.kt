@@ -3,9 +3,9 @@ package com.shapegames.movieDatabase.Users
 open class User(
     var UserName: String,
     protected var UserPassword: String,
-    protected var HasHowManyFavorits: MutableList<Int>,
-    protected var MovieFavorites: MutableList<String>,
-    protected var SeriesFavorites: MutableList<String>
+    protected var HasHowManyFavorits: MutableList<Int>?,
+    protected var MovieFavorites: MutableList<String>?,
+    protected var SeriesFavorites: MutableList<String>?
 ) {}
 
 class BasicUser(UserName: String, UserPassword: String, HasHowManyFavorits: MutableList<Int>, MovieFavorites: MutableList<String>, SeriesFavorites: MutableList<String>): User(UserName, UserPassword, HasHowManyFavorits, MovieFavorites, SeriesFavorites){

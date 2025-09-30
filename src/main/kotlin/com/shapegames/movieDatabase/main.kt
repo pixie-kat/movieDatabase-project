@@ -8,5 +8,5 @@ import com.shapegames.movieDatabase.DatabasMenu.welcomeMessageNotLoggedIn
 
 fun main() {
     //more coming soon!
-    welcomeMessageAdministrator()
+    welcomeMessageBasicUser()
 }
